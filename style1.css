@@ -1,0 +1,535 @@
+/* claude
+
+
+/* ======================================== 
+ RESET E VARIÁVEIS 
+======================================== */ 
+* { 
+ margin: 0; 
+ padding: 0; 
+ box-sizing: border-box; 
+} 
+:root { 
+ --vermelho: #D32F2F; 
+ --vermelho-escuro: #B71C1C; 
+ --marrom: #4E342E; 
+ --preto: #1a1a1a; 
+ --creme: #FFF8E1; 
+ --branco: #ffffff; 
+ --cinza-claro: #f5f5f5; 
+ --cinza: #757575; 
+} 
+html { 
+ scroll-behavior: smooth; 
+} 
+body { 
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  color: var(--preto); 
+ line-height: 1.6; 
+ overflow-x: hidden; 
+ background: var(--branco); 
+} 
+/* ======================================== 
+ HEADER 
+======================================== */ 
+header { 
+ position: fixed; 
+ top: 0; 
+ width: 100%; 
+ background: rgba(26, 26, 26, 0.95); 
+ backdrop-filter: blur(10px); 
+ z-index: 1000; 
+ padding: 1.5rem 0;
+ box-shadow: 0 2px 15px rgba(0,0,0,0.3); } 
+header h1 { 
+ text-align: center; 
+ font-size: 2.5rem; 
+ font-weight: 900; 
+ color: var(--vermelho); 
+ text-transform: uppercase; 
+ letter-spacing: 3px; 
+ margin-bottom: 1rem; 
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.3); } 
+nav { 
+ max-width: 1200px; 
+ margin: 0 auto; 
+} 
+nav ul { 
+ display: flex; 
+ justify-content: center; 
+ list-style: none; 
+ gap: 3rem; 
+ flex-wrap: wrap; 
+} 
+nav ul li a { 
+ color: var(--branco); 
+ text-decoration: none; 
+ font-weight: 600; 
+ font-size: 1rem; 
+ transition: all 0.3s; 
+ text-transform: uppercase; 
+ letter-spacing: 1px; 
+ padding: 0.5rem 1rem; 
+ border-radius: 5px; 
+} 
+nav ul li a:hover { 
+ color: var(--vermelho); 
+ background: rgba(211, 47, 47, 0.1); }
+/* ======================================== 
+ SEÇÃO INÍCIO (SOBRE NÓS) 
+======================================== */ 
+#inicio { 
+ padding: 150px 2rem 80px; 
+ background: linear-gradient(135deg, var(--creme) 0%, #fff 100%);  text-align: center; 
+} 
+#inicio .sobre h1 { 
+ font-size: 3.5rem; 
+ font-weight: 900; 
+ color: var(--vermelho); 
+ text-transform: uppercase; 
+ letter-spacing: 3px; 
+ margin-bottom: 2rem; 
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
+} 
+#inicio p { 
+ max-width: 900px; 
+ margin: 0 auto; 
+ font-size: 1.3rem; 
+ line-height: 2; 
+ color: var(--marrom); 
+ font-weight: 400; 
+} 
+/* ======================================== 
+ CONTAINER GERAL 
+======================================== */ 
+.container { 
+ max-width: 1200px; 
+ margin: 0 auto; 
+ padding: 0 2rem; 
+} 
+/* ======================================== 
+ SEÇÃO MONTE SEU HAMBÚRGUER 
+======================================== */ 
+#monte { 
+ padding: 80px 0;
+ background: var(--cinza-claro); } 
+#monte h2 { 
+ text-align: center; 
+ font-size: 3rem; 
+ font-weight: 900; 
+ color: var(--preto); 
+ text-transform: uppercase; 
+ letter-spacing: 2px; 
+ margin-bottom: 3rem; 
+} 
+#monte form { 
+ max-width: 700px; 
+ margin: 0 auto; 
+ background: var(--branco); 
+ padding: 3rem; 
+ border-radius: 20px; 
+ box-shadow: 0 10px 40px rgba(0,0,0,0.1); } 
+#monte label { 
+ display: block; 
+ font-weight: 700; 
+ font-size: 1.1rem; 
+ color: var(--preto); 
+ margin-bottom: 0.7rem; 
+ margin-top: 1.5rem; 
+} 
+#monte select, 
+#monte input[type="number"], 
+#monte textarea { 
+ width: 100%; 
+ padding: 1rem; 
+ border: 2px solid var(--cinza-claro);  border-radius: 10px; 
+ font-size: 1rem; 
+ font-family: inherit; 
+ transition: all 0.3s; 
+ background: var(--branco); 
+}
+#monte select:focus, 
+#monte input[type="number"]:focus, 
+#monte textarea:focus { 
+ outline: none; 
+ border-color: var(--vermelho); 
+ box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1); } 
+#monte h3 { 
+ font-size: 1.5rem; 
+ color: var(--vermelho); 
+ margin-top: 2rem; 
+ margin-bottom: 1rem; 
+ font-weight: 700; 
+ border-bottom: 3px solid var(--vermelho);  padding-bottom: 0.5rem; 
+} 
+#monte form > div { 
+ display: flex; 
+ align-items: center; 
+ gap: 1rem; 
+ margin-bottom: 1rem; 
+ padding: 1rem; 
+ background: var(--cinza-claro); 
+ border-radius: 10px; 
+} 
+#monte input[type="checkbox"] { 
+ width: 20px; 
+ height: 20px; 
+ cursor: pointer; 
+ accent-color: var(--vermelho); 
+} 
+#monte form > div label { 
+ flex: 1; 
+ margin: 0; 
+ font-weight: 600; 
+} 
+#monte form > div input[type="number"] {
+ width: 80px; 
+ padding: 0.5rem; 
+} 
+#monte textarea { 
+ resize: vertical; 
+ min-height: 100px; 
+} 
+#monte button[type="submit"] { 
+ width: 100%; 
+ background: var(--vermelho); 
+ color: var(--branco); 
+ border: none; 
+ padding: 1.2rem 2rem; 
+ font-size: 1.2rem; 
+ font-weight: 700; 
+ border-radius: 50px; 
+ cursor: pointer; 
+ text-transform: uppercase; 
+ letter-spacing: 2px; 
+ margin-top: 2rem; 
+ transition: all 0.3s; 
+ box-shadow: 0 5px 20px rgba(211, 47, 47, 0.3); } 
+#monte button[type="submit"]:hover { 
+ background: var(--vermelho-escuro);  transform: translateY(-3px); 
+ box-shadow: 0 8px 30px rgba(211, 47, 47, 0.5); } 
+/* ========================================  SEÇÃO COMBOS (HAMBÚRGUERES ESPECIAIS) ======================================== */ 
+/* Lista de promoções */
+#lista-promocoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+#lista-promocoes li {
+  background: var(--branco);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#lista-promocoes li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#lista-promocoes li img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#lista-promocoes li span {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--preto);
+}
+
+#lista-promocoes li strong {
+  color: var(--vermelho);
+  font-size: 1.2rem;
+}
+
+/* Botão Promoção Menor Que R$20 */
+#MenorQue20 {
+    display: inline-block;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+    margin: 1rem 0;
+}
+
+#MenorQue20:hover {
+    background-color: var(--vermelho-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.5);
+}
+
+
+/* ========================================  SEÇÃO CONTATO 
+======================================== */
+ #contato { 
+ padding: 80px 0; 
+ background: var(--cinza-claro); } 
+#contato h2 { 
+ text-align: center; 
+ font-size: 3rem; 
+ font-weight: 900; 
+ color: var(--preto); 
+ text-transform: uppercase; 
+ letter-spacing: 2px; 
+ margin-bottom: 3rem; 
+} 
+#contato .container { 
+ display: grid; 
+ grid-template-columns: 1fr 1fr;  gap: 4rem; 
+} 
+#contato form { 
+ background: var(--branco); 
+ padding: 2.5rem;
+ border-radius: 20px; 
+ box-shadow: 0 10px 40px rgba(0,0,0,0.1); } 
+#contato label { 
+ display: block; 
+ font-weight: 700; 
+ font-size: 1rem; 
+ color: var(--preto); 
+ margin-bottom: 0.5rem; 
+ margin-top: 1rem; 
+} 
+#contato input, 
+#contato textarea { 
+ width: 100%; 
+ padding: 1rem; 
+ border: 2px solid var(--cinza-claro);  border-radius: 10px; 
+ font-size: 1rem; 
+ font-family: inherit; 
+ transition: all 0.3s; 
+} 
+#contato input:focus, 
+#contato textarea:focus { 
+ outline: none; 
+ border-color: var(--vermelho); 
+ box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1); } 
+#contato textarea { 
+ resize: vertical; 
+ min-height: 120px; 
+} 
+#contato button[type="submit"] { 
+ width: 100%; 
+ background: var(--vermelho); 
+ color: var(--branco); 
+ border: none; 
+ padding: 1rem 2rem; 
+ font-size: 1.1rem;
+ font-weight: 700; 
+ border-radius: 50px; 
+ cursor: pointer; 
+ text-transform: uppercase; 
+ letter-spacing: 1px; 
+ margin-top: 1.5rem; 
+ transition: all 0.3s; 
+ box-shadow: 0 5px 20px rgba(211, 47, 47, 0.3); } 
+#contato button[type="submit"]:hover {  background: var(--vermelho-escuro);  transform: translateY(-3px); 
+ box-shadow: 0 8px 30px rgba(211, 47, 47, 0.5); } 
+.info-contato { 
+ background: var(--branco); 
+ padding: 2.5rem; 
+ border-radius: 20px; 
+ box-shadow: 0 10px 40px rgba(0,0,0,0.1); } 
+.info-contato h3 { 
+ font-size: 2rem; 
+ color: var(--vermelho); 
+ margin-bottom: 2rem; 
+ font-weight: 700; 
+} 
+.info-contato p { 
+ font-size: 1.1rem; 
+ color: var(--marrom); 
+ margin-bottom: 1.2rem; 
+ line-height: 1.8; 
+} 
+/* ========================================  SEÇÃO CARRINHO 
+======================================== */
+ #carrinho { 
+ padding: 80px 0; 
+ background: var(--branco);
+} 
+#carrinho h2 { 
+ text-align: center; 
+ font-size: 3rem; 
+ font-weight: 900; 
+ color: var(--preto); 
+ text-transform: uppercase; 
+ letter-spacing: 2px; 
+ margin-bottom: 2rem; 
+} 
+#carrinho .container { 
+ max-width: 800px; 
+} 
+#carrinho input[type="text"] { 
+ width: 100%; 
+ padding: 1.2rem; 
+ border: 2px solid var(--cinza-claro);  border-radius: 10px; 
+ font-size: 1.1rem; 
+ font-family: inherit; 
+ margin-bottom: 1.5rem; 
+ transition: all 0.3s; 
+} 
+#carrinho input[type="text"]:focus { 
+ outline: none; 
+ border-color: var(--vermelho); 
+ box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1); } 
+#carrinho button { 
+ width: 100%; 
+ background: var(--vermelho); 
+ color: var(--branco); 
+ border: none; 
+ padding: 1.2rem 2rem; 
+ font-size: 1.2rem; 
+ font-weight: 700; 
+ border-radius: 50px; 
+ cursor: pointer;
+ text-transform: uppercase; 
+ letter-spacing: 2px; 
+ transition: all 0.3s; 
+ box-shadow: 0 5px 20px rgba(211, 47, 47, 0.3); } 
+#carrinho button:hover { 
+ background: var(--vermelho-escuro);  transform: translateY(-3px); 
+ box-shadow: 0 8px 30px rgba(211, 47, 47, 0.5); } 
+#carrinhoCompras { 
+ margin-top: 2rem; 
+ padding: 2rem; 
+ background: var(--cinza-claro); 
+ border-radius: 15px; 
+ min-height: 100px; 
+} 
+/* ========================================  FOOTER 
+======================================== */
+ footer { 
+ background: var(--preto); 
+ color: var(--branco); 
+ padding: 3rem 0 2rem; 
+ text-align: center; 
+} 
+footer .container { 
+ max-width: 1200px; 
+} 
+footer p { 
+ margin-bottom: 0.8rem; 
+ font-size: 1rem; 
+ color: #ccc; 
+} 
+.redes-sociais { 
+ margin-top: 2rem; 
+}
+.redes-sociais a { 
+ color: var(--creme); 
+ text-decoration: none; 
+ font-weight: 600; 
+ font-size: 1rem; 
+ transition: color 0.3s; 
+ margin: 0 0.5rem; 
+} 
+.redes-sociais a:hover { 
+ color: var(--vermelho); 
+} 
+/* ========================================  RESPONSIVIDADE 
+======================================== */ @media (max-width: 768px) { 
+ /* Header */ 
+ header h1 { 
+ font-size: 1.8rem; 
+ margin-bottom: 0.8rem; 
+ } 
+  
+ header { 
+ padding: 1rem 0; 
+ } 
+  
+ nav ul { 
+ flex-direction: column; 
+ gap: 1rem; 
+ padding: 0 1rem; 
+ } 
+  
+ nav ul li a { 
+ display: block; 
+ text-align: center; 
+ } 
+  
+ /* Início */ 
+ #inicio { 
+ padding: 130px 1rem 60px;  }
+  
+ #inicio .sobre h1 { 
+ font-size: 2rem; 
+ } 
+  
+ #inicio p { 
+ font-size: 1.1rem; 
+ } 
+  
+ /* Monte */ 
+ #monte form { 
+ padding: 2rem 1.5rem; 
+ } 
+  
+ #monte form > div { 
+ flex-direction: column; 
+ align-items: flex-start; 
+ gap: 0.5rem; 
+ } 
+  
+ #monte form > div input[type="number"] {  width: 100%; 
+ } 
+  
+ /* Combos */ 
+ .combos-list { 
+ grid-template-columns: 1fr;  gap: 2rem; 
+ } 
+  
+ /* Contato */ 
+ #contato .container { 
+ grid-template-columns: 1fr;  gap: 2rem; 
+ } 
+  
+ /* Títulos */ 
+ h2 { 
+ font-size: 2rem !important;  } 
+  
+ /* Container */ 
+ .container {
+ padding: 0 1rem;  } 
+} 
+@media (max-width: 480px) {  header h1 { 
+ font-size: 1.5rem;  letter-spacing: 1px;  } 
+  
+ nav ul { 
+ gap: 0.5rem; 
+ } 
+  
+ nav ul li a { 
+ font-size: 0.9rem;  padding: 0.4rem 0.8rem;  } 
+  
+ #inicio .sobre h1 { 
+ font-size: 1.5rem;  } 
+  
+ #inicio p { 
+ font-size: 1rem;  } 
+  
+ .combo-item img { 
+ height: 200px; 
+ } 
+}

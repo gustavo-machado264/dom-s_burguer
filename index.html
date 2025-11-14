@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>DOM`s Burguer</title>
 </head>
+
 <body>
-   <header>
-    <h1>DOM`s Burguer</h1>
+    <header>
+        <h1>DOM`s Burguer</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -20,239 +22,231 @@
     </header>
 
     <section id="inicio">
-        <div class="sobre"><h1>Sobre nós.</h1></div>
-        <p>Nascemos da vontade de servir hambúrgueres de verdade — feitos com ingredientes frescos, carne de qualidade e paixão em cada detalhe. Aqui, cada lanche é preparado à mão, no momento, para garantir sabor e confiança em cada mordida. Nosso propósito é simples: entregar o melhor hambúrguer que você já provou, com o cuidado de quem ama o que faz.</p>
+        <div class="sobre">
+            <h1>Sobre nós.</h1>
+        </div>
+        <p>Nascemos da vontade de servir hambúrgueres de verdade — feitos com ingredientes frescos, carne de qualidade e
+            paixão em cada detalhe. Aqui, cada lanche é preparado à mão, no momento, para garantir sabor e confiança em
+            cada mordida. Nosso propósito é simples: entregar o melhor hambúrguer que você já provou, com o cuidado de
+            quem ama o que faz.</p>
     </section>
 
-   <section id="monte">
-    <div class="container">
-        <h2>Monte seu Hambúrguer</h2>
-        <form>
+    <section id="monte">
+        <div class="container">
+            <h2>Monte seu Hambúrguer</h2>
+            <form>
 
-            <label for="pao">Escolha o pão:</label>
-            <select id="pao" name="pao">
-                <option value="">Selecione</option>
-                <option value="tradicional">Tradicional - R$ 2,00</option>
-                <option value="australiano">Australiano - R$ 3,00</option>
-                <option value="brioche">Brioche - R$ 3,50</option>
-                <option value="integral">Integral - R$ 2,50</option>
-            </select>
+                <label for="pao">Escolha o pão:</label>
+                <select id="pao" name="pao">
+                    <option value="">Selecione</option>
+                    <option value="tradicional">Tradicional - R$ 2,00</option>
+                    <option value="australiano">Australiano - R$ 3,00</option>
+                    <option value="brioche">Brioche - R$ 3,50</option>
+                    <option value="integral">Integral - R$ 2,50</option>
+                </select>
 
-            <label for="carne">Escolha a carne:</label>
-            <select id="carne" name="carne">
-                <option value="">Selecione</option>
-                <option value="bovino">Bovino - R$ 8,00</option>
-                <option value="suina">Suína - R$ 7,50</option>
-                <option value="frango">Frango - R$ 7,00</option>
-                <option value="vegetariano">Vegetariano - R$ 6,50</option>
-                <option value="duplo">Duplo - R$ 12,00</option>
-                <option value="triplo">Triplo - R$ 15,00</option>
-            </select>
-            <input type="number" id="qtd_proteina" name="qtd_proteina" min="0" max="10" value="0">
+                <label for="carne">Escolha a carne:</label>
+                <select id="carne" name="carne">
+                    <option value="">Selecione</option>
+                    <option value="bovino">Bovino - R$ 8,00</option>
+                    <option value="suina">Suína - R$ 7,50</option>
+                    <option value="frango">Frango - R$ 7,00</option>
+                    <option value="vegetariano">Vegetariano - R$ 6,50</option>
+                    <option value="duplo">Duplo - R$ 12,00</option>
+                    <option value="triplo">Triplo - R$ 15,00</option>
+                </select>
+                <input type="number" id="qtd_proteina" name="qtd_proteina" min="0" max="10" value="0">
 
-            <h3>Queijos</h3>
-            <div>
-                <input type="checkbox" id="cheddar" name="queijo" value="cheddar">
-                <label for="cheddar">Cheddar - R$ 2,00</label>
-                <input type="number" id="qtd_cheddar" name="qtd_cheddar" min="0" max="5" value="0">
-            </div>
-            <div>
-                <input type="checkbox" id="mussarela" name="queijo" value="mussarela">
-                <label for="mussarela">Mussarela - R$ 1,50</label>
-                <input type="number" id="qtd_mussarela" name="qtd_mussarela" min="0" max="5" value="0">
-            </div>
-            <div>
-                <input type="checkbox" id="prato" name="queijo" value="prato">
-                <label for="prato">Prato - R$ 1,80</label>
-                <input type="number" id="qtd_prato" name="qtd_prato" min="0" max="5" value="0">
-            </div>
+                <h3>Queijos</h3>
+                <div>
+                    <input type="checkbox" id="cheddar" name="queijo" value="cheddar">
+                    <label for="cheddar">Cheddar - R$ 2,00</label>
+                    <input type="number" id="qtd_cheddar" name="qtd_cheddar" min="0" max="5" value="0">
+                </div>
+                <div>
+                    <input type="checkbox" id="mussarela" name="queijo" value="mussarela">
+                    <label for="mussarela">Mussarela - R$ 1,50</label>
+                    <input type="number" id="qtd_mussarela" name="qtd_mussarela" min="0" max="5" value="0">
+                </div>
+                <div>
+                    <input type="checkbox" id="prato" name="queijo" value="prato">
+                    <label for="prato">Prato - R$ 1,80</label>
+                    <input type="number" id="qtd_prato" name="qtd_prato" min="0" max="5" value="0">
+                </div>
 
-            <h3>Complementos</h3>
-            <div>
-                <input type="checkbox" id="bacon" name="complemento" value="bacon">
-                <label for="bacon">Bacon - R$ 3,00</label>
-                <input type="number" id="qtd_bacon" name="qtd_bacon" min="0" max="5" value="0">
-            </div>
-            <div>
-                <input type="checkbox" id="alface" name="complemento" value="alface">
-                <label for="alface">Alface - R$ 0,80</label>
-                <input type="number" id="qtd_alface" name="qtd_alface" min="0" max="5" value="0">
-            </div>
-            <div>
-                <input type="checkbox" id="tomate" name="complemento" value="tomate">
-                <label for="tomate">Tomate - R$ 1,00</label>
-                <input type="number" id="qtd_tomate" name="qtd_tomate" min="0" max="5" value="0">
-            </div>
-            <div>
-                <input type="checkbox" id="cebola" name="complemento" value="cebola">
-                <label for="cebola">Cebola - R$ 1,00</label>
-                <input type="number" id="qtd_cebola" name="qtd_cebola" min="0" max="5" value="0">
-            </div>
+                <h3>Complementos</h3>
+                <div>
+                    <input type="checkbox" id="bacon" name="complemento" value="bacon">
+                    <label for="bacon">Bacon - R$ 3,00</label>
+                    <input type="number" id="qtd_bacon" name="qtd_bacon" min="0" max="5" value="0">
+                </div>
+                <div>
+                    <input type="checkbox" id="alface" name="complemento" value="alface">
+                    <label for="alface">Alface - R$ 0,80</label>
+                    <input type="number" id="qtd_alface" name="qtd_alface" min="0" max="5" value="0">
+                </div>
+                <div>
+                    <input type="checkbox" id="tomate" name="complemento" value="tomate">
+                    <label for="tomate">Tomate - R$ 1,00</label>
+                    <input type="number" id="qtd_tomate" name="qtd_tomate" min="0" max="5" value="0">
+                </div>
+                <div>
+                    <input type="checkbox" id="cebola" name="complemento" value="cebola">
+                    <label for="cebola">Cebola - R$ 1,00</label>
+                    <input type="number" id="qtd_cebola" name="qtd_cebola" min="0" max="5" value="0">
+                </div>
 
-            <h3>Molhos</h3>
-            <div>
-                <input type="checkbox" id="maionese" name="molho" value="maionese">
-                <label for="maionese">Maionese da casa - R$ 1,50</label>
-                <input type="number" id="qtd_maionese" name="qtd_maionese" min="0" max="3" value="0">
-            </div>
-            <div>
-                <input type="checkbox" id="barbecue" name="molho" value="barbecue">
-                <label for="barbecue">Barbecue - R$ 1,50</label>
-                <input type="number" id="qtd_barbecue" name="qtd_barbecue" min="0" max="3" value="0">
-            </div>
-            <div>
-                <input type="checkbox" id="picante" name="molho" value="picante">
-                <label for="picante">Picante - R$ 1,50</label>
-                <input type="number" id="qtd_picante" name="qtd_picante" min="0" max="3" value="0">
-            </div>
+                <h3>Molhos</h3>
+                <div>
+                    <input type="checkbox" id="maionese" name="molho" value="maionese">
+                    <label for="maionese">Maionese da casa - R$ 1,50</label>
+                    <input type="number" id="qtd_maionese" name="qtd_maionese" min="0" max="3" value="0">
+                </div>
+                <div>
+                    <input type="checkbox" id="barbecue" name="molho" value="barbecue">
+                    <label for="barbecue">Barbecue - R$ 1,50</label>
+                    <input type="number" id="qtd_barbecue" name="qtd_barbecue" min="0" max="3" value="0">
+                </div>
+                <div>
+                    <input type="checkbox" id="picante" name="molho" value="picante">
+                    <label for="picante">Picante - R$ 1,50</label>
+                    <input type="number" id="qtd_picante" name="qtd_picante" min="0" max="3" value="0">
+                </div>
 
-            <label for="observacoes">Observações:</label>
-            <textarea id="observacoes" name="observacoes" rows="3" placeholder="Ex: ponto da carne, sem cebola..."></textarea>
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes" rows="3"
+                    placeholder="Ex: ponto da carne, sem cebola..."></textarea>
 
-            <button type="submit">Montar meu hambúrguer</button>
-        </form>
-    </div>
-</section>
-
-
-
-
-<section id="combos">
-    <div class="container">
-        <h2>Hambúrgueres Especiais</h2>
-        <div class="combos-list">
-
-            <div class="combo-item">
-                <img src="img/Clássico Supreme.jpg" alt="Clássico Supreme">
-                <h3>Clássico Supreme</h3>
-                <p>Hambúrguer bovino suculento com alface, tomate e molho especial da casa.</p>
-                <p class="preco">R$ 18,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Bacon Lovers.png" alt="Bacon Lovers">
-                <h3>Bacon Lovers</h3>
-                <p>Duplo hambúrguer com queijo derretido e muito bacon crocante.</p>
-                <p class="preco">R$ 25,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Cheddar Explosion.jpg" alt="Cheddar Explosion">
-                <h3>Cheddar Explosion</h3>
-                <p>Hambúrguer suculento com três tipos de queijo cheddar derretido.</p>
-                <p class="preco">R$ 28,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Frango Crocante.webp" alt="Frango Crocante">
-                <h3>Frango Crocante</h3>
-                <p>Peito de frango empanado, alface, tomate e molho barbecue.</p>
-                <p class="preco">R$ 19,50</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Veggie Delight.jpg" alt="Veggie Delight">
-                <h3>Veggie Delight</h3>
-                <p>Hambúrguer vegetariano com mix de legumes grelhados e queijo.</p>
-                <p class="preco">R$ 20,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Duplo Power.png" alt="Duplo Power">
-                <h3>Duplo Power</h3>
-                <p>Dois hambúrgueres bovinos, queijo, bacon e molho especial.</p>
-                <p class="preco">R$ 30,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Barbecue Master.jpg" alt="Barbecue Master">
-                <h3>Barbecue Master</h3>
-                <p>Hambúrguer suculento com queijo, cebola caramelizada e molho barbecue.</p>
-                <p class="preco">R$ 26,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Picante Tropical.jpg" alt="Picante Tropical">
-                <h3>Picante Tropical</h3>
-                <p>Hambúrguer com molho picante, abacaxi grelhado e queijo derretido.</p>
-                <p class="preco">R$ 22,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/Trio Queijo.webp" alt="Trio Queijo">
-                <h3>Trio Queijo</h3>
-                <p>Hambúrguer com cheddar, mussarela e queijo prato, para os amantes de queijo.</p>
-                <p class="preco">R$ 20,00</p>
-            </div>
-
-            <div class="combo-item">
-                <img src="img/House Special.jpg" alt="House Special">
-                <h3>House Special</h3>
-                <p>Hambúrguer exclusivo da casa com ingredientes secretos e muito sabor.</p>
-                <p class="preco">R$ 32,00</p>
-            </div>
-
+                <button type="submit">Montar meu hambúrguer</button>
+            </form>
         </div>
-    </div>
-</section>
+    </section>
 
+
+    <section class="container" id="promocoes">
+    <h2>Promoções do dia</h2>
+    <p>Confira abaixo todos os nossos lanches com os melhores preços!</p>
+
+    <ul id="lista-promocoes">
+        <li>
+            <img src="img/SpliceTomato.jpg" alt="SpliceTomato">
+            <span>SpliceTomato</span>
+            <strong>R$ 30,99</strong>
+        </li>
+
+        <li>
+            <img src="img/CheddarFilter.jpg" alt="CheddarFilter">
+            <span>CheddarFilter</span>
+            <strong>R$ 12,99</strong>
+        </li>
+
+        <li>
+            <img src="img/Pickle'sReduce.jpg" alt="Pickle'sReduce">
+            <span>Pickle'sReduce</span>
+            <strong>R$ 10,99</strong>
+        </li>
+
+        <li>
+            <img src="img/JoinOnim.webp" alt="JoinOnim">
+            <span>JoinOnim</span>
+            <strong>R$ 34,99</strong>
+        </li>
+
+        <li>
+            <img src="img/PushMeltDom's.jpg" alt="PushMeltDom's">
+            <span>PushMeltDom's</span>
+            <strong>R$ 39,99</strong>
+        </li>
+
+        <li>
+            <img src="img/BreadPush.jpg" alt="BreadPush">
+            <span>BreadPush</span>
+            <strong>R$ 19,99</strong>
+        </li>
+
+        <li>
+            <img src="img/PullDom's.png" alt="PullDom's">
+            <span>PullDom's</span>
+            <strong>R$ 13,99</strong>
+        </li>
+
+        <li>
+            <img src="img/SortBacon.jpg" alt="SortBacon">
+            <span>SortBacon</span>
+            <strong>R$ 14,99</strong>
+        </li>
+
+        <li>
+            <img src="img/ForEachMill.avif" alt="ForEachMill">
+            <span>ForEachMill</span>
+            <strong>R$ 23,99</strong>
+        </li>
+    </ul>
+
+    <h3>Veja os lanches com preço menor que R$ 20,00:</h3>
+    <button id="MenorQue20">Clique aqui para exibir!</button>
+
+    <div id="espacoLanchesBaratos"></div>
+</section>
 
 
     <section id="contato">
-    <div class="container">
-        <h2>Fale Conosco</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem..." required></textarea>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem..."
+                    required></textarea>
 
-            <button type="submit">Enviar Mensagem</button>
-        </form>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
 
-        <div class="info-contato">
-            <h3>Informações</h3>
-            <p>📍 Endereço: Rua Exemplo, 123 - Centro</p>
-            <p>📞 Telefone: (11) 99999-9999</p>
-            <p>✉️ E-mail: contato@hamburgueria.com</p>
-            <p>🕓 Horário: Seg a Dom - 11h às 23h</p>
+            <div class="info-contato">
+                <h3>Informações</h3>
+                <p>📍 Endereço: Rua Exemplo, 123 - Centro</p>
+                <p>📞 Telefone: (11) 99999-9999</p>
+                <p>✉️ E-mail: contato@hamburgueria.com</p>
+                <p>🕓 Horário: Seg a Dom - 11h às 23h</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<section id="carrinho">
-    <div class="container">
-        <h2>Monte seu pedido rápido</h2>
-        <input type="text" id="lanches" placeholder="Digite seus lanches separados por vírgula">
-        <button id="botao">Adicionar ao carrinho</button>
-        <div id="carrinhoCompras"></div>
-    </div>
-</section>
+    <section id="carrinho">
+        <div class="container">
+            <h2>Monte seu pedido rápido</h2>
+            <input type="text" id="lanches" placeholder="Digite seus lanches separados por vírgula">
+            <button id="botao">Adicionar ao carrinho</button>
+            <div id="carrinhoCompras"></div>
+        </div>
+    </section>
 
 
     <footer>
-    <div class="container">
-        <p>&copy; 2025 - Todos os direitos reservados.</p>
-        <p>Feito com ❤️ para os amantes de hambúrguer.</p>
+        <div class="container">
+            <p>&copy; 2025 - Todos os direitos reservados.</p>
+            <p>Feito com ❤️ para os amantes de hambúrguer.</p>
 
-        <div class="redes-sociais">
-            <a href="#" target="_blank">Instagram</a> |
-            <a href="#" target="_blank">Facebook</a> |
-            <a href="#" target="_blank">WhatsApp</a>
+            <div class="redes-sociais">
+                <a href="#" target="_blank">Instagram</a> |
+                <a href="#" target="_blank">Facebook</a> |
+                <a href="#" target="_blank">WhatsApp</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

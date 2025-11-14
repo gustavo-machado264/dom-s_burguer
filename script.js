@@ -69,3 +69,33 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     });
 });
+
+
+// Lista de lanches com nome e preço
+     
+const listaDeLanches = [
+    { nome: "CheddarFilter", preco: 12.99 },
+    { nome: "PullDom's", preco: 13.99 },
+    { nome: "SortBacon", preco: 14.99 },
+    { nome: "Pickle'sReduce", preco: 10.99 },
+    { nome: "PushMeltDom's", preco: 39.99 },
+    { nome: "BreadPush", preco: 19.99 },
+    { nome: "ForEachMill", preco: 23.99 },
+    { nome: "SpliceTomato", preco: 30.99 },
+    { nome: "JoinOnim", preco: 34.99 }
+];
+
+const botao = document.getElementById("MenorQue20");
+const divLanchesBaratos = document.getElementById("espacoLanchesBaratos");
+
+botao.addEventListener("click", () => {
+    divLanchesBaratos.innerHTML = "";
+
+    const baratos = listaDeLanches.filter(lanche => lanche.preco < 20);
+
+    baratos.forEach(lanche => {
+        const p = document.createElement("p");
+        p.textContent = `${lanche.nome} — R$ ${lanche.preco.toFixed(2)}`;
+        divLanchesBaratos.appendChild(p);
+    });
+});
